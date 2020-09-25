@@ -47,7 +47,15 @@
 
     <el-card class="box-card">
       <div slot="header" class="clearfix">根据筛选条件共查询到46147条结果</div>
-      <el-table :data="tableData" style="width: 100%" stripe="true">
+
+      <!-- 数据列表 -->
+      <el-table
+        :data="tableData"
+        style="width: 100%"
+        stripe="true"
+        class="list-table"
+        size="mini"
+      >
         <el-table-column prop="date" label="日期" width="180">
         </el-table-column>
         <el-table-column prop="name" label="姓名" width="180">
@@ -58,8 +66,6 @@
       <el-pagination layout="prev, pager, next" :total="1000" background>
       </el-pagination>
     </el-card>
-
-    <!-- 数据列表 -->
   </div>
 </template>
 <script>
@@ -111,5 +117,8 @@ export default {
 <style scoped lang='less'>
 .filter-card {
   margin-bottom: 40px;
+}
+.list-table {
+  margin-bottom: 20px;
 }
 </style>
